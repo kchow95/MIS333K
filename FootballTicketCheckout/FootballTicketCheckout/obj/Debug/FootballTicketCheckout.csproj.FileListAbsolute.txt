@@ -1,0 +1,6 @@
+C:\Fall 2016\MIS 333K\FootballTicketCheckout\FootballTicketCheckout\bin\Debug\FootballTicketCheckout.exe.config
+C:\Fall 2016\MIS 333K\FootballTicketCheckout\FootballTicketCheckout\bin\Debug\FootballTicketCheckout.exe
+C:\Fall 2016\MIS 333K\FootballTicketCheckout\FootballTicketCheckout\bin\Debug\FootballTicketCheckout.pdb
+C:\Fall 2016\MIS 333K\FootballTicketCheckout\FootballTicketCheckout\obj\Debug\FootballTicketCheckout.csprojResolveAssemblyReference.cache
+C:\Fall 2016\MIS 333K\FootballTicketCheckout\FootballTicketCheckout\obj\Debug\FootballTicketCheckout.exe
+C:\Fall 2016\MIS 333K\FootballTicketCheckout\FootballTicketCheckout\obj\Debug\FootballTicketCheckout.pdb

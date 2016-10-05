@@ -1,0 +1,6 @@
+C:\Fall 2016\MIS 333K\Chow_Kenneth_HW1\Chow_Kenneth_HW1\bin\Debug\Chow_Kenneth_HW1.exe.config
+C:\Fall 2016\MIS 333K\Chow_Kenneth_HW1\Chow_Kenneth_HW1\bin\Debug\Chow_Kenneth_HW1.exe
+C:\Fall 2016\MIS 333K\Chow_Kenneth_HW1\Chow_Kenneth_HW1\bin\Debug\Chow_Kenneth_HW1.pdb
+C:\Fall 2016\MIS 333K\Chow_Kenneth_HW1\Chow_Kenneth_HW1\obj\Debug\Chow_Kenneth_HW1.csprojResolveAssemblyReference.cache
+C:\Fall 2016\MIS 333K\Chow_Kenneth_HW1\Chow_Kenneth_HW1\obj\Debug\Chow_Kenneth_HW1.exe
+C:\Fall 2016\MIS 333K\Chow_Kenneth_HW1\Chow_Kenneth_HW1\obj\Debug\Chow_Kenneth_HW1.pdb

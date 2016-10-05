@@ -1,0 +1,81 @@
+﻿
+<!-- Kenneth Chow
+    Homework 3
+    9/25/2016 -->
+
+@model Chow_Kenneth_hw3.Models.Member
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link href="/Content/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <title>Details</title>
+</head>
+<body>
+    <div>
+        <h4>Member</h4>
+        <hr />
+        <dl class="dl-horizontal">
+            <!--First Name detail-->
+            <dt>
+                First Name
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.str_FName)
+            </dd>
+            <!--Last Name detail-->
+            <dt>
+                Last Name
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.str_LName)
+            </dd>
+            <!--Email detail-->
+            <dt>
+                Email
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.str_Email)
+            </dd>
+            <!--Phone detail-->
+            <dt>
+                Phone
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.str_Phone)
+            </dd>
+            <!--Text detail-->
+            <dt>
+                Ok To Text?
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.bool_OKToText)
+            </dd>
+            <!--Major detail-->
+            <dt>
+                Major
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Major)
+            </dd>
+    
+        </dl>
+    </div>
+    <p>
+        @Html.ActionLink("Edit", "Edit", new { id = Model.int_MemberID }) |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+</body>
+</html>

@@ -1,0 +1,99 @@
+﻿<!-- Kenneth Chow
+    Homework 3
+    9/25/2016 -->
+
+
+@model Chow_Kenneth_hw3.Models.Member
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link href="/Content/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <title>Create</title>
+</head>
+<body>
+    @using (Html.BeginForm()) 
+    {
+        @Html.AntiForgeryToken()
+        
+        <div class="form-horizontal">
+            <h4>Member</h4>
+            <hr />
+            <!-- Labels for first name -->
+            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+            <div class="form-group">
+                <div class= "control-label col-md-2">First Name</div>
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.str_FName, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.str_FName, "", new { @class = "text-danger" })
+                </div>
+            </div>
+            <!-- Labels for last name -->
+            <div class="form-group">
+                <div class="control-label col-md-2">Last Name</div>
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.str_LName, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.str_LName, "", new { @class = "text-danger" })
+                </div>
+            </div>
+    
+            <!-- Labels for email -->
+            <div class="form-group">
+                <div class="control-label col-md-2">Email</div>
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.str_Email, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.str_Email, "", new { @class = "text-danger" })
+                </div>
+            </div>
+    
+            <!-- Labels for phone -->
+            <div class="form-group">
+                <div class="control-label col-md-2">Phone</div>
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.str_Phone, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.str_Phone, "", new { @class = "text-danger" })
+                </div>
+            </div>
+    
+            <!-- Labels for ok to text? -->
+            <div class="form-group">
+                <div class="control-label col-md-2">Is it okay for us to text you?</div>
+                <div class="col-md-10">
+                    <div class="checkbox">
+                        @Html.EditorFor(model => model.bool_OKToText)
+                        @Html.ValidationMessageFor(model => model.bool_OKToText, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Labels for major -->
+            <div class="form-group">
+                <div class="control-label col-md-2">Major</div>
+                <div class="col-md-10">
+                   @Html.EnumDropDownListFor(
+                        x => x.Major,
+                        "Select a major",
+                        new { @class = "form-control" })
+                    @Html.ValidationMessageFor(model => model.Major, "", new { @class = "text-danger" })
+                </div>
+            </div>
+    
+            <div class="form-group">
+                <div class="col-md-offset-2 col-md-10">
+                    <input type="submit" value="Create" class="btn btn-default" />
+                </div>
+            </div>
+        </div>
+    }
+    
+    <div>
+        @Html.ActionLink("Back to List", "Index")
+    </div>
+</body>
+</html>

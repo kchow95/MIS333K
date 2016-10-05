@@ -1,0 +1,87 @@
+﻿<!-- Kenneth Chow
+    Homework 3
+    9/25/2016 -->
+
+
+@model Chow_Kenneth_hw3.Models.Member
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <link href="/Content/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Delete</title>
+</head>
+<body>
+    <h3>Are you sure you want to delete this?</h3>
+    <div>
+        <h4>Member</h4>
+        <hr />
+        <dl class="dl-horizontal">
+            <!--First Name label-->
+            <dt>
+                First Name
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.str_FName)
+            </dd>
+    
+            <!--Last Name label-->
+            <dt>
+                Last Name
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.str_LName)
+            </dd>
+            <!--Email label-->
+            <dt>
+                Email
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.str_Email)
+            </dd>
+            <!--phone label-->
+            <dt>
+                Phone
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.str_Phone)
+            </dd>
+            <!--text -->
+                Is it okay to text you?
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.bool_OKToText)
+            </dd>
+            <!--major label-->
+            <dt>
+                Major
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Major)
+            </dd>
+    
+        </dl>
+    
+        @using (Html.BeginForm()) {
+            @Html.AntiForgeryToken()
+    
+            <div class="form-actions no-color">
+                <input type="submit" value="Delete" class="btn btn-default" /> |
+                @Html.ActionLink("Back to List", "Index")
+            </div>
+        }
+    </div>
+</body>
+</html>
