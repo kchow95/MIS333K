@@ -1,0 +1,65 @@
+﻿@model IEnumerable<chow_kenneth_hw4_2.Models.Member>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+    @Html.ActionLink("Committees", "Index", "Committees")</br>
+    @Html.ActionLink("Events", "Index", "Events")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.str_FName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.str_LName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.str_Email)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.str_Phone)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.bool_OKToText)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Major)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.str_FName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.str_LName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.str_Email)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.str_Phone)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.bool_OKToText)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Major)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.int_MemberID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.int_MemberID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.int_MemberID })
+        </td>
+    </tr>
+}
+
+</table>
